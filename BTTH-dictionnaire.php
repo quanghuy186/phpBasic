@@ -57,5 +57,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Từ: " . $word . ". <br/>Nghĩa của từ: " . $description;
     }
 }
-
 ?>
