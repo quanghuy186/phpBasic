@@ -20,7 +20,7 @@ class Circle{
     }   
     
     public function show(){
-        return "I am is $this->radius";
+        echo "I am is $this->radius <br>";
     }      
 
     public function calculateArea(){
@@ -49,6 +49,7 @@ class Cylinder extends Circle {
 // $circle->setColor("red");   
 // $circle->show();
 $cylinder = new Cylinder();
+$cylinder->show();
 $cylinder->setRadius(1);
 $cylinder->setHeight(1);
 echo $cylinder->thetich();
