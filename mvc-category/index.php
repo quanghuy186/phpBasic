@@ -29,6 +29,9 @@
         case 'edit':
             $controller->edit($id);
             break;
+        case 'detail':
+            $controller->detail();
+            break;
         default:
             $controller->index();
             break;

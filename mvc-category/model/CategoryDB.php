@@ -44,6 +44,13 @@ class  CategoryDB{
     }
 
     public function detail($id){
-
+        $sql = "SELECT * FROM categories WHERE id = ?";
+        $statement = $this->connection->prepare($sql);
+        $statement->bindParam(1, $id);
+        $statement->execute();
+        $row = $statement->fetch();
+        $category = new Category($row['name'], $row['price'], $row['description']);
+        $category->id = $row['id'];
+        return $category;
     }
 }

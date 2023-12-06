@@ -1,5 +1,5 @@
 <table border="1px">
-    <a href="./index.php?c=add">Them moi</a>
+    <a href="./index.php?c=add">Add</a>
     <thead>
         <tr>
             <td>ID</td>
@@ -19,6 +19,7 @@
                 echo "<td>".$category->description."</td>";
                 echo "<td>
                     <a href='index.php?c=edit&id=".$category->id."'>Edit</a>
+                    <a href='index.php?c=detail&id=".$category->id."'>View</a>
                     <a href='index.php?c=delete&id=".$category->id."'>Delete</a>
                 </td>";
                 echo "</tr>";

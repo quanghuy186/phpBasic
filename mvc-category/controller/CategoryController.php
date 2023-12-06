@@ -55,5 +55,11 @@ class CategoryController{
     public function update($id){
 
     }
+
+    public function detail(){
+        $id = $_GET['id'];
+        $category = $this->categoryDB->detail($id);
+        include 'view/detail.php';
+    }
     
 }
