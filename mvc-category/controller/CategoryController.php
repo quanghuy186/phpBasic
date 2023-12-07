@@ -49,11 +49,17 @@ class CategoryController{
         header('Location: index.php');
     }
 
-    public function edit($id){
-    }
-
-    public function update($id){
-
+    public function edit(){
+        if($_SERVER['REQUEST_METHOD'] === 'GET'){
+            $id = $_GET['id'];
+            $category = $this->categoryDB->detail($id);
+            include 'view/edit.php';
+        }else{
+            $id = $_POST['id'];
+            $category = new Category($_POST['name'], $_POST['price'], $_POST['description']);
+            $this->categoryDB->update($id, $category);
+            header('Location: index.php.');
+        }
     }
 
     public function detail(){

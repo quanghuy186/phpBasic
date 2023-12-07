@@ -17,7 +17,6 @@ class  CategoryDB{
         return $stm->execute();
     }
 
-
     public function getCategory():array{
         $sql = "SELECT * FROM categories";
         $statement = $this->connection->prepare($sql);
@@ -39,8 +38,14 @@ class  CategoryDB{
         return $statement->execute();
     }
 
-    public function update($id){
-
+    public function update($id, $category){
+        $sql = "UPDATE categories SET name = ?, price = ?, description = ? WHERE id = ?";
+        $statement = $this->connection->prepare($sql);
+        $statement->bindParam(1, $category->name);
+        $statement->bindParam(2, $category->price);
+        $statement->bindParam(3, $category->description);
+        $statement->bindParam(4, $id);
+        return $statement->execute();
     }
 
     public function detail($id){
