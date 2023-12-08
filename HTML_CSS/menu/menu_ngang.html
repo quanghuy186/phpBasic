@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #menu > ul > li {
+        float: left;
+      }
+
+      #menu ul ul {
+        visibility: hidden;
+      }
+
+      #menu ul li:hover ul {
+        visibility: visible;
+      }
+
+      #menu ul li a:hover {
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="menu">
+      <ul>
+        <li>
+          Xem 1
+          <ul>
+            <li><a href="">aaa</a></li>
+            <li><a href="">bbb</a></li>
+            <li><a href="">ccc</a></li>
+          </ul>
+        </li>
+
+        <li>
+          Xem 2
+          <ul>
+            <li><a href="">aaa</a></li>
+            <li><a href="">bbb</a></li>
+            <li><a href="">ccc</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
