@@ -1,0 +1,72 @@
+header {
+  font-size: 13px;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.left-nav a:hover,
+.nav-right a:hover {
+  text-decoration: solid 2px #000 underline;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.left-nav button:hover {
+  text-decoration: solid 1.5px #fff underline;
+}
+
+.nav-sign a:hover {
+  text-decoration: none;
+}
+
+.animation {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.banner img {
+  position: relative;
+}
+
+.banner .list-group {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+}
+
+.link-group a {
+  text-decoration: none;
+}
+
+.link-group a:hover {
+  text-decoration: 1.2px solid #000 underline;
+}
+
+a {
+  text-decoration: none;
+}
+
+.home a:hover {
+  text-decoration: 2px solid #140b7d underline;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  /* Định vị nút điều khiển */
+  position: absolute;
+  top: 50%; /* Đưa nút lên trên giữa */
+  transform: translateY(-50%); /* Dịch chuyển nút lên trên */
+  width: auto; /* Chiều rộng tự động */
+  margin-top: 0; /* Bỏ margin top */
+}
+
+.carousel-control-prev {
+  left: -30px; /* Đặt vị trí của nút prev */
+}
+
+.carousel-control-next {
+  right: -30px; /* Đặt vị trí của nút next */
+}
