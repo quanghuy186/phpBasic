@@ -182,6 +182,28 @@ a {
 .adapt span {
   opacity: 0;
   overflow: auto;
-  transform: translateY(-50px); /* Di chuyển xuống dưới 50px */
-  transition: opacity 0.5s ease, transform 2.5s ease;
+  transform: translateX(900px); /* Di chuyển xuống dưới 50px */
+  transition: opacity 0.1s ease, transform 8s ease;
+}
+
+.adapt span.active {
+  opacity: 1;
+  transform: translateX(-740px);
+}
+
+.group-btn {
+  position: absolute;
+  bottom: 120px;
+  left: 210px;
+}
+
+.icon img {
+  width: 40px;
+  height: 40px;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }

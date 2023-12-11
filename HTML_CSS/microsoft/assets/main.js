@@ -33,3 +33,15 @@ window.addEventListener("scroll", function () {
     text.classList.remove("active");
   }
 });
+
+window.addEventListener("scroll", function () {
+  const text = document.querySelector(".adapt span");
+  const textPosition = text.getBoundingClientRect().top;
+  const screenPosition = window.innerHeight / 1; // Điều chỉnh vị trí để kích hoạt hiệu ứng
+
+  if (textPosition < screenPosition) {
+    text.classList.add("active");
+  } else {
+    text.classList.remove("active");
+  }
+});
