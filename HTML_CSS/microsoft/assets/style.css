@@ -207,3 +207,14 @@ a {
   justify-content: center;
   flex-wrap: wrap;
 }
+
+.img-item {
+  position: relative;
+}
+
+.item-banner {
+  position: absolute;
+  transform: translateY(-50%);
+  margin-top: 32px;
+  /* top: 50%; */
+}
