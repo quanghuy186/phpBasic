@@ -103,12 +103,19 @@
         <div class="filter">
             <select name="category">
                 <option value="0">Thể loại</option>
-                <option value="1">Category 1</option>
-                <option value="2">Category 2</option>
-                <option value="3">Category 3</option>
+                <?php
+                    foreach ($notes as $row){
+                ?>
+                <option value="1"><?php echo " $row->name " ?></option>
+                <?php
+                    }
+                ?>
             </select>
-            <input type="text" placeholder="Title" />
-            <button type="submit">Search</button>
+            <form action="view/search.php" method="GET">
+                <input type="text" name="search_query" placeholder="Tiêu đề" />
+                <button type="submit">Tìm kiếm</button>
+            </form>
+
         </div>
         <table>
             <thead>
@@ -116,7 +123,7 @@
                     <th>STT</th>
                     <th>Tiêu đề</th>
                     <th>Phân loại</th>
-                    <th></th>
+                    <th>Hành động</th>
                 </tr>
             </thead>
 
@@ -126,7 +133,7 @@
                     echo "<tr>";
                     echo "<td>" . $note->id . "</td>";
                     echo "<td>" . $note->title . "</td>";
-                    echo "<td>" . $note->content . "</td>";
+                    echo "<td>" . $note->name . "</td>";
 
                     echo "<td class='btn-container'>
                             <a class='btn edit' href='index.php?c=edit&id=" . $note->id . "'>Edit</a>
@@ -138,7 +145,8 @@
                 ?>
             </tbody>
             <div><button class="btn btn-success">
-                    <a href="<?php echo "index.php?c=add" ?>">Thêm mới ghi chú</a>
+                    <a class="text-white text-decoration-none" href="<?php echo "index.php?c=add" ?>">Thêm mới ghi
+                        chú</a>
                 </button></div>
         </table>
     </div>

@@ -34,6 +34,9 @@
         case 'detail':
             $controller->detail();
             break;
+        case 'search':
+            $controller->searchByTitle();
+            break;
         default:
             $controller->index();
             break;

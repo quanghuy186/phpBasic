@@ -19,6 +19,7 @@
         padding: 20px;
         border-radius: 8px;
         background-color: #fff;
+        margin: auto;
     }
 
     h1 {
@@ -79,7 +80,7 @@
 </head>
 
 <body>
-    <form action="">
+    <form action="" method="post">
         <h1>Add New Note</h1>
         <div>
             <label for="title">Title</label>
@@ -91,7 +92,17 @@
             <textarea id="content" name="content" cols="30" rows="10"></textarea>
         </div>
 
-        <button type="button">Cancel</button>
+
+        <!-- <select name="type_id" id="">
+            <option value="1">Chọn phân loại</option>
+            <option value="2"></option>
+        </select> -->
+
+
+        <a href="index.php?">
+            <button type="button">Cancel</button>
+
+        </a>
         <button type="submit">Save</button>
     </form>
 </body>

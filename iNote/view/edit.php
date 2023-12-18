@@ -81,12 +81,18 @@
 <body>
     <div class="main">
         <h1>Note</h1>
-        <p>Edit plant fan</p>
+        <p>Sửa nội dung</p>
         <form action="" method="post">
-            <input type="text" name="note" placeholder="Your note..." />
+            <input type="hidden" name="id" value="<?php echo $note->id ?>">
+            <input type="hidden" name="title" value="<?php echo $note->title ?>" placeholder="Tiêu đề" />
+            <input type="text" name="content" value="<?php echo $note->content ?>" placeholder="Nội dung" />
+            <input type="hidden" name="type_id" value="<?php echo $note->type_id ?>" placeholder="Type ID" />
+
             <div>
-                <button class="delete" type="button">Delete</button>
-                <button type="submit">Edit</button>
+                <button class="delete mx-3" type="button">
+                    <a class="text-white text-decoration-none" href="index.php?">Quay lại</a>
+                </button>
+                <button type="submit">Sửa</button>
             </div>
         </form>
     </div>

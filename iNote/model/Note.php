@@ -6,6 +6,7 @@ class Note {
     public $title;
     public $content;
     public $type_id;
+    public $name;
 
     public function __construct($title, $content, $type_id) {
         $this->title = $title;

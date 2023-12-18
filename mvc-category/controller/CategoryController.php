@@ -25,7 +25,7 @@ class CategoryController{
                 }
             }
             if(empty($error)){
-                $name = $_POST['name'];
+                $title = $_POST['name'];
                 $price = $_POST['price'];
                 $description = $_POST['description'];
                 $category = new Category($name, $price, $description);
